@@ -30,8 +30,8 @@
 
 .section {
     padding: 6rem;
-    background-color: black;
-    color: white;
+    background-color: rgb(255, 212, 218);
+    color: black;
 }
 
 .section h2 {
