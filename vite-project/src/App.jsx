@@ -1,15 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import NavBar from "./components/NavBar";
+import ItemListContainer from "./components/ItemListContainer";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <h1>HOLA</h1>
-    </div>
+  <div>
+    <NavBar />
+    <ItemListContainer greeting={"Esto es un texto de ejemplo que voy a utilizar para cambiarle el idioma desde el botón del NavBar"} />
+  </div>
   )
-}
+};
 
-export default App
+export default App;

@@ -1,0 +1,7 @@
+.textGreeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    font-size: 3.5rem;
+}

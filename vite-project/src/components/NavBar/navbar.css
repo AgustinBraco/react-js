@@ -1,0 +1,42 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15rem;
+    background-color: grey;
+}
+
+ul {
+    display: flex;
+    margin: 10rem;
+    list-style: none;
+}
+
+li {
+    margin: 5rem;
+}
+
+button {
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all ease 0.4s;
+    font-size: 2.5rem;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:active {
+    border: solid black 1px;
+}
+
+.changeMode {
+    background-color: lightblue;
+    border: solid 1px lightblue;
+}
+
+.chanceLanguage {
+    background-color: lightyellow;
+    border: solid 1px lightyellow;
+}

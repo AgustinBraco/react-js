@@ -1,0 +1,22 @@
+.cardWidget {
+    display: flex;
+    margin: 2rem;
+}
+
+.cartLogo {
+    margin: 1.5rem;
+    width: 4rem;
+}
+
+.cartNumber {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -2rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    background-color: black;
+    color: white;
+}
