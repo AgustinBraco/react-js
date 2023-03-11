@@ -1,9 +1,11 @@
 import "./itemListContainer.css"
 
-function ItemListContainer({greeting}) {
+function ItemListContainer({language, mode, pokemon}) {
   return (
     <div>
-        <span className="textGreeting">{greeting}</span>
+        <span className="textGreeting">{language}</span>
+        <span className="textGreeting">{mode}</span>
+        <span className="textGreeting">{pokemon?.name.toUpperCase()}</span>
     </div>
   )
 };
