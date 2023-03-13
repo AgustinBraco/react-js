@@ -1,8 +1,12 @@
-import NavBar from "./components/NavBar";
-import ItemListContainer from "./components/ItemListContainer";
+import NavBar from "../components/NavBar";
+import ItemListContainer from "../components/ItemListContainer";
 import { useEffect, useState } from 'react';
+import {useParams} from 'react-router-dom';
 
-function App() {
+function Root() {
+  const params = useParams();
+  const isCategoryRoutes = Boolean(params.id);
+
   const [language, setLanguage] = useState("English");
   const [mode, setMode] = useState("Light");
 
@@ -32,9 +36,9 @@ function App() {
   return (
   <div>
     <NavBar changeLanguage={changeLanguage} changeMode={changeMode} changePokemon={changePokemon}/>
-    <ItemListContainer language={language} mode={mode} pokemon={pokemon}/>
+    <ItemListContainer language={language} mode={mode} pokemon={pokemon} isCategoryRoutes={isCategoryRoutes} categoryId={params.id}/>
   </div>
   );
 };
 
-export default App;
+export default Root;

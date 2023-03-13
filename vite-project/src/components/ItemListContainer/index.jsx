@@ -3,7 +3,7 @@ import Products from "../../mocks/products"
 import ItemList from "../ItemList/index"
 import { useId, useEffect, useState } from "react";
 
-function ItemListContainer({language, mode, pokemon}) {
+function ItemListContainer({language, mode, pokemon, categoryId, isCategoryRoutes}) {
   const [products, setProducts] = useState([]);
  
   useEffect(() => {
@@ -13,11 +13,18 @@ function ItemListContainer({language, mode, pokemon}) {
     );
 
     productsPromise
-    .then((response) => setProducts(response))
+    .then((response) => {
+      if (isCategoryRoutes) {
+        const productsFiltered = response.filter(
+          (products) => products.category === categoryId
+        );
+        setProducts(productsFiltered)
+      } else {
+        setProducts(response)
+      }
+    })
     .catch((err) => console.log(err));
-  }, []);
-
-  console.log({ products })
+  }, [categoryId]);
 
   return (
     <div>
